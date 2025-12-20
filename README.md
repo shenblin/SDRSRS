@@ -35,7 +35,7 @@ All scripts are provided for **reviewer assessment, transparency, and reproducib
 
 ## 🧠 Dual-Raman-shift principle
 
-![Dual-channel OPD principle](images/dual_channel_principle.png)
+![Dual-channel OPD principle](images/dual_channel_principle.jog)
 
 Simultaneous acquisition of two Raman shifts (Ω₁, Ω₂) is enabled by a **birefringent-crystal–induced optical path difference (OPD)** combined with orthogonal polarization modulation and phase-sensitive detection.
 This allows **strictly synchronous CH₃–CH₂ measurements without spectral scanning**.
@@ -107,8 +107,6 @@ SDRSRS_Spectra_public
 ### 🧪 Demo C — PCA / UMAP statistical analysis
 
 **Notebook:** `PCA_UMAP_analysis_mouse_model.ipynb`
-
-![PCA and UMAP example](images/pca_umap_demo.png)
 
 Performs PCA and UMAP on **biological replicates** of paired CH₃–CH₂ data.
 
