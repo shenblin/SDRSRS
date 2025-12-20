@@ -92,7 +92,7 @@ Sellmeier_birefringence
 
 **Script:** `SDRSRS_Spectra_public.m`
 
-![Dual-channel SDRSRS spectra](imagesSDRSRS_Spectra_public.jpg)
+![Dual-channel SDRSRS spectra](images/SDRSRS_Spectra_public.jpg)
 
 Reproduces simultaneous X/Y demodulated Raman spectra.
 
