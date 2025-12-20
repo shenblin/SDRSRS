@@ -142,10 +142,3 @@ jupyter notebook PCA_UMAP_analysis_mouse_model.ipynb
 
 All data and code supporting this study are available upon reasonable request.
 📧 **Contact:** `shenblin@foxmail.com`
-
-
-如果你愿意，下一步我可以帮你：
-
-1. **生成 `/images` 里缺的 PCA/UMAP 示意图**
-2. 帮你**压缩成一个 Nature 推荐的 code.zip 结构**
-3. 按 **Nature “Code availability”** 标准写一段正式声明
