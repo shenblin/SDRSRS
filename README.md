@@ -35,7 +35,7 @@ All scripts are provided for **reviewer assessment, transparency, and reproducib
 
 ## 🧠 Dual-Raman-shift principle
 
-![Dual-channel OPD principle](images/dual_channel_principle.jog)
+![Dual-channel OPD principle](images/dual_channel_principle.jpg)
 
 Simultaneous acquisition of two Raman shifts (Ω₁, Ω₂) is enabled by a **birefringent-crystal–induced optical path difference (OPD)** combined with orthogonal polarization modulation and phase-sensitive detection.
 This allows **strictly synchronous CH₃–CH₂ measurements without spectral scanning**.
