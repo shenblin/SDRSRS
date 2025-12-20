@@ -141,4 +141,4 @@ jupyter notebook PCA_UMAP_analysis_mouse_model.ipynb
 ## 📬 Contact & Data Availability
 
 All data and code supporting this study are available upon reasonable request.
-📧 **Contact:** `shenblin@foxmail.com`
+📧 **Contact:** `It will be available after publication`
