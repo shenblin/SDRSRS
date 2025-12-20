@@ -38,7 +38,8 @@ SDRSRS_Code_Package/
 │   └── SDRSRS_Spectra_public.m
 │
 ├── 📁 Python
-│   └── PCA_UMAP_analysis.ipynb
+│   └──PCA_UMAP_analysis_mouse_model.ipynb
+│   └──PCA_UMAP_analysis_human_CRC.ipynb
 │
 ├── 📁 Example_Data
 │   ├── DMSO1chn.csv
@@ -166,17 +167,6 @@ Reconstruct simultaneous X/Y demodulated Raman spectra
 SDRSRS_Spectra_public
 ```
 
-**Output:**
-
-```
-Intensity
-│     ── X-channel (CH₃)
-│     ── Y-channel (CH₂)
-│
-└────────────────────── Wavenumber (cm⁻¹)
-        ← ΔΩ →
-```
-
 ⏱ Runtime: < 5 s
 
 ---
@@ -191,16 +181,9 @@ Statistical separation of paired CH₃–CH₂ data
 (reproduces **Fig. 4–5**)
 
 ```bash
-jupyter notebook PCA_UMAP_analysis.ipynb
+jupyter notebook PCA_UMAP_analysis_mouse_model.ipynb
 ```
 
-**Output:**
-
-```
-PCA space:        UMAP embedding:
-● ● ● ○ ○         ○ ○ ● ●
-● ● ● ○ ○         ○ ○ ● ●
-```
 
 ⏱ Runtime: < 1 min
 
@@ -223,19 +206,9 @@ PCA space:        UMAP embedding:
 * Rows = biological replicates
 * Columns = intensities or ratios
 
----
-
-## ♻️ (Optional) Full Reproducibility Map
-
-```
-Fig. 2f  ← Sellmeier_birefringence.m
-Fig. 2g–h ← SDRSRS_Spectra_public.m
-Fig. 4–5  ← PCA_UMAP_analysis.ipynb
-```
 
 All analyses operate on **biological replicates**, not pixel-level data, consistent with the manuscript’s *Statistics and reproducibility* section.
 
----
 
 ## 📬 Contact & Data Availability
 
