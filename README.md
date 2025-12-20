@@ -10,7 +10,11 @@ This repository contains the **custom analysis and visualization code** used in 
 
 > *Simultaneous Dual-Raman-Shift Scanning-Free Stimulated Raman Scattering Microscopy for Label-Free Biomolecular Imaging*
 
-The software enables:
+### 🔧 System concept at a glance
+
+![SDRSRS system overview](images/SDRSRS_system.jpg)
+
+The software supports the complete SDRSRS workflow:
 
 ```
 ┌──────────────────────────────────────────┐
@@ -29,127 +33,68 @@ All scripts are provided for **reviewer assessment, transparency, and reproducib
 
 ---
 
-## 📂 Directory Structure
+## 🧠 Dual-Raman-shift principle
 
-```
-SDRSRS_Code_Package/
-├── 📁 MATLAB
-│   ├── Sellmeier_birefringence.m
-│   └── SDRSRS_Spectra_public.m
-│
-├── 📁 Python
-│   └──PCA_UMAP_analysis_mouse_model.ipynb
-│   └──PCA_UMAP_analysis_human_CRC.ipynb
-│
-├── 📁 Example_Data
-│   ├── DMSO1chn.csv
-│   ├── MeOH1chn.csv
-│   ├── DMSO2chn.csv
-│   └── MeOH2chn.csv
-│
-└── 📄 README.md
-```
+![Dual-channel OPD principle](images/dual_channel_principle.png)
 
----
+Simultaneous acquisition of two Raman shifts (Ω₁, Ω₂) is enabled by a **birefringent-crystal–induced optical path difference (OPD)** combined with orthogonal polarization modulation and phase-sensitive detection.
+This allows **strictly synchronous CH₃–CH₂ measurements without spectral scanning**.
+
 
 ## 💻 1. System Requirements
 
 ### 🖥 Operating Systems
 
-* ✅ Windows 10 / 11 (tested)
-* ✅ macOS 12+ (Intel / Apple Silicon)
-* ✅ Linux (Ubuntu 20.04+)
+* Windows 10 / 11 (tested)
+* macOS 12+ (Intel / Apple Silicon)
+* Linux (Ubuntu 20.04+)
 
----
-
-### 🧮 MATLAB Environment
+### 🧮 MATLAB
 
 * MATLAB **R2021a or newer** (tested up to R2023b)
-* Required toolboxes:
+* Toolboxes:
 
   * Signal Processing Toolbox
   * Statistics and Machine Learning Toolbox
-  * (Optional) Curve Fitting Toolbox
 
-```
-MATLAB Usage  →  Spectral modeling & visualization
-```
+### 🐍 Python
 
----
-
-### 🐍 Python Environment (Statistical Analysis)
-
-* Python ≥ 3.8 (tested: 3.9, 3.10)
-
-Required packages:
+* Python ≥ 3.8 (tested: 3.9–3.10)
 
 ```bash
 pip install numpy scipy pandas matplotlib scikit-learn umap-learn jupyter
 ```
 
-```
-Python Usage  →  PCA / UMAP / clustering analysis
-```
+### 🧰 Hardware
+
+* Standard desktop/laptop
+* ❌ No SRS microscope hardware required to run the code
 
 ---
 
-### 🧰 Hardware Requirements
+## ▶️ 2. Demo & Expected Output
 
-* Standard desktop or laptop computer
-* ❌ No specialized hardware required
-* ⚠️ SRS microscope hardware is **not required** to run the software
+### 🧪 Demo A — Raman-shift separation vs crystal length
 
----
+**Script:** `Sellmeier_birefringence.m`
 
-## ⚙️ 2. Installation Guide
-
-### Step 1 — Unpack
-
-```text
-Unzip SDRSRS_Code_Package.zip
-```
-
-### Step 2 — MATLAB Setup
-
-* Open MATLAB
-* Set working directory to `MATLAB/`
-* Verify toolbox availability
-
-⏱ **Typical setup time:** < 5 minutes
-
----
-
-## ▶️ 3. Demo & Expected Output
-
-### 🧪 Demo A — Birefringent Crystal Raman-Shift Model
-
-**Script:**
-`Sellmeier_birefringence.m`
-
-**Purpose:**
-Compute Raman-shift separation ΔΩ vs. YVO₄ crystal length
-(reproduces **Fig. 2f**)
+Reproduces Raman-shift separation ΔΩ as a function of birefringent-crystal length.
 
 ```matlab
 Sellmeier_birefringence
 ```
+
 ⏱ Runtime: < 2 s
 
 ---
 
-### 🧪 Demo B — SDRSRS Dual-Channel Spectra
+### 🧪 Demo B — SDRSRS dual-channel spectra
 
-**Script:**
-`SDRSRS_Spectra_public.m`
+**Script:** `SDRSRS_Spectra_public.m`
 
-**Purpose:**
-Reconstruct simultaneous X/Y demodulated Raman spectra
-(reproduces **Fig. 2g–h**)
+![Dual-channel SDRSRS spectra](imagesSDRSRS_Spectra_public.jpg)
 
-**Steps:**
-
-1. Set `file_path` to `Example_Data/`
-2. Run:
+Reproduces simultaneous X/Y demodulated Raman spectra.
 
 ```matlab
 SDRSRS_Spectra_public
@@ -159,47 +104,50 @@ SDRSRS_Spectra_public
 
 ---
 
-### 🧪 Demo C — PCA & UMAP Analysis
+### 🧪 Demo C — PCA / UMAP statistical analysis
 
-**Notebook:**
-`PCA_UMAP_analysis_mouse_model.ipynb`
+**Notebook:** `PCA_UMAP_analysis_mouse_model.ipynb`
 
-**Purpose:**
-Statistical separation of paired CH₃–CH₂ data
-(reproduces **Fig. 4–5**)
+![PCA and UMAP example](images/pca_umap_demo.png)
+
+Performs PCA and UMAP on **biological replicates** of paired CH₃–CH₂ data.
 
 ```bash
 jupyter notebook PCA_UMAP_analysis_mouse_model.ipynb
 ```
 
-
 ⏱ Runtime: < 1 min
 
 ---
 
-## 🔁 4. Using Your Own Data
+## 🔁 3. Using Your Own Data
 
-### MATLAB (Spectral Data)
+### MATLAB
 
 * Replace CSV files in `Example_Data/`
 * Column format:
 
-  * Col 1 → X demodulation
-  * Col 2 → Y demodulation
-  * Col 3 → reference (optional)
+  * Column 1: X demodulation
+  * Column 2: Y demodulation
+  * Column 3: reference (optional)
 
-### Python (Statistical Data)
+### Python
 
-* Replace tables with your own paired CH₃–CH₂ values
-* Rows = biological replicates
-* Columns = intensities or ratios
+* Replace tables with paired CH₃–CH₂ intensities
+* Rows = biological replicates (cells / animals / patients)
 
+> All statistical analyses operate on **biological replicates**, not pixel-level data, consistent with the manuscript’s *Statistics and reproducibility* section.
 
-All analyses operate on **biological replicates**, not pixel-level data, consistent with the manuscript’s *Statistics and reproducibility* section.
-
+---
 
 ## 📬 Contact & Data Availability
 
 All data and code supporting this study are available upon reasonable request.
-If you have any questions, please email `shenblin@foxmail.com`.
+📧 **Contact:** `shenblin@foxmail.com`
 
+
+如果你愿意，下一步我可以帮你：
+
+1. **生成 `/images` 里缺的 PCA/UMAP 示意图**
+2. 帮你**压缩成一个 Nature 推荐的 code.zip 结构**
+3. 按 **Nature “Code availability”** 标准写一段正式声明
