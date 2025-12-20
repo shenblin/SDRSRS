@@ -116,6 +116,7 @@ jupyter notebook PCA_UMAP_analysis_mouse_model.ipynb
 
 ⏱ Runtime: < 1 min
 
+---
 
 ## Software and algorithms (pseudocode description)
 
@@ -244,6 +245,7 @@ SAVE figures and summary tables
 
 This pseudocode corresponds to the `PCA_UMAP_analysis.ipynb` notebooks and reproduces the multivariate analyses used for tissue discrimination in the manuscript.
 
+---
 
 > All statistical analyses operate on **biological replicates**, not pixel-level data, consistent with the manuscript’s *Statistics and reproducibility* section.
 
