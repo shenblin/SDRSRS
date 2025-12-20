@@ -133,18 +133,6 @@ Compute Raman-shift separation ΔΩ vs. YVO₄ crystal length
 ```matlab
 Sellmeier_birefringence
 ```
-
-**Output:**
-
-```
-Raman shift difference (cm⁻¹)
-│
-│        ●  ●  ●  ●   ← experimental points
-│      ─────────────
-│     /   shaded     \  ← theoretical range
-│____/________________\________  Crystal length (cm)
-```
-
 ⏱ Runtime: < 2 s
 
 ---
@@ -174,7 +162,7 @@ SDRSRS_Spectra_public
 ### 🧪 Demo C — PCA & UMAP Analysis
 
 **Notebook:**
-`PCA_UMAP_analysis.ipynb`
+`PCA_UMAP_analysis_mouse_model.ipynb`
 
 **Purpose:**
 Statistical separation of paired CH₃–CH₂ data
@@ -213,5 +201,5 @@ All analyses operate on **biological replicates**, not pixel-level data, consist
 ## 📬 Contact & Data Availability
 
 All data and code supporting this study are available upon reasonable request.
-Please contact the corresponding author for additional datasets or clarification.
+If you have any questions, please email `shenblin@foxmail.com`.
 
