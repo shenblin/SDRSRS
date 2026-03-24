@@ -254,4 +254,4 @@ This pseudocode corresponds to the `PCA_UMAP_analysis.ipynb` notebooks and repro
 ## 📬 Contact & Data Availability
 
 All data and code supporting this study are available upon reasonable request.
-📧 **Contact:** shenblin@foxmail.com
+📧 **Contact:** Dr. Binglin Shen: shenblin@foxmail.com
